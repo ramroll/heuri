@@ -1,0 +1,26 @@
+{
+  "name": "heuri",
+  "version": "1.0.0",
+  "description": "A javascript library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha src/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramroll/heuri.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "ramroll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ramroll/heuri/issues"
+  },
+  "homepage": "https://github.com/ramroll/heuri#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
