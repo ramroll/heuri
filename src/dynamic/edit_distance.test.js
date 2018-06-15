@@ -1,5 +1,5 @@
 const {assert} = require('chai')
-const edit_distance = require('./edit_distance')
+const EditDistance = require('./edit_distance')
 
 function pad(str, n) {
   str = str + ''
@@ -18,7 +18,7 @@ function print(d, s, t) {
     let line = ''
     line += pad(i === 0 ? ' ' : s[i - 1], 3) + ' '
     for(let j = 0; j < n; j++) {
-      line += pad( d[i][j], 3) + ' '
+      line += pad( d[i][j].v, 3) + ' '
     }
     console.log(line)
   }
@@ -29,7 +29,9 @@ describe('edit distance', () => {
     const s = 'abc'
     const t = 'acb'
     const d = edit_distance(s, t)
-    print(d, s, t)
+
+    const result = d[s.length][t.length]
+    assert.equal(result.v, 2)
   })
 
 })
